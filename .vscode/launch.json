@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:xcb}",
+			"name": "Debug xcb",
+			"program": "${workspaceFolder:xcb}/.build/debug/xcb",
+			"preLaunchTask": "swift: Build Debug xcb"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"args": [],
+			"cwd": "${workspaceFolder:xcb}",
+			"name": "Release xcb",
+			"program": "${workspaceFolder:xcb}/.build/release/xcb",
+			"preLaunchTask": "swift: Build Release xcb"
+		}
+	]
+}
