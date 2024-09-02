@@ -1,3 +1,4 @@
 [tools]
 shfmt = "3.9.0"
 yamllint = "1.35.1"
+xcbeautify = "2.11.0"
