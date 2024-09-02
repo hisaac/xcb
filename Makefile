@@ -17,14 +17,17 @@ build:
 build/release:
 	"$(scripts_dir)/build.bash" --configuration release
 
+test:
+	"$(scripts_dir)/test.bash"
+
+run:
+	"$(scripts_dir)/run.bash" $(args)
+
 format:
 	"$(scripts_dir)/format.bash"
 
 lint:
 	"$(scripts_dir)/lint.bash"
-
-run:
-	"$(scripts_dir)/run.bash"
 
 # utility targets
 
@@ -36,5 +39,5 @@ nuke:
 
 # aliases
 
-ci: up build/release
+ci: up test
 rebuild: clean build
