@@ -10,6 +10,7 @@
 set -o errexit  # Exit on error
 set -o nounset  # Exit on unset variable
 set -o pipefail # Exit on pipe failure
+IFS=$'\n\t'
 
 source "$(dirname -- "$(readlink -f "${BASH_SOURCE[0]}")")/logging.bash"
 

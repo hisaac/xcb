@@ -14,6 +14,9 @@ up:
 build:
 	"$(scripts_dir)/build.bash"
 
+build/release:
+	"$(scripts_dir)/build.bash" --configuration release
+
 format:
 	"$(scripts_dir)/format.bash"
 
@@ -33,5 +36,5 @@ nuke:
 
 # aliases
 
-ci: up build
+ci: up build/release
 rebuild: clean build
