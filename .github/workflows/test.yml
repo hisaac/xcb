@@ -16,5 +16,5 @@ jobs:
 
       - name: Test
         run: |
-          xcrun xcode-select --switch "/Applications/Xcode_16_beta_6.app"
+          sudo xcode-select --switch "/Applications/Xcode_16_beta_6.app"
           make ci
