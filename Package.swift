@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -17,7 +17,15 @@ let package = Package(
 			dependencies: [
 				.product(name: "ArgumentParser", package: "swift-argument-parser"),
 				.product(name: "Path", package: "Path"),
-			]
+			],
+			path: "Sources/xcb/Sources"
+		),
+		.testTarget(
+			name: "xcbTests",
+			dependencies: [
+				"xcb",
+			],
+			path: "Sources/xcb/Tests"
 		),
 	]
 )

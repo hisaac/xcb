@@ -1,18 +1,20 @@
 ---
 
-name: Build
+name: Test
 
 on:
   pull_request:
     branches: main
 
 jobs:
-  build:
-    name: Build using swift
+  test:
     runs-on: macos-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build
-        run: make ci
+
+      - name: Test
+        run: |
+          sudo xcode-select --switch "/Applications/Xcode_16_beta_6.app"
+          make ci
